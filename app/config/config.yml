@@ -1,0 +1,27 @@
+imports:
+    - { resource: parameters.yml }
+
+framework:
+    secret: S0ME_SECRET
+    templating:
+        engines: ['twig']
+    profiler: { only_exceptions: false }
+
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     '%database_host%'
+        dbname:   '%database_name%'
+        user:     '%database_user%'
+        password: '%database_password%'
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            Tree:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Tree/Entity'
+                prefix: 'Tree\Entity\'
+                alias: Tree

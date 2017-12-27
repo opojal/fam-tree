@@ -1,0 +1,21 @@
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+bin/*
+*/logs/*
+*/cache/*
+web/js/*
+web/css/*
+web/uploads/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+
+app/SymfonyRequirements.php
+
+# Sass cache folders
+*.sass-cache*
